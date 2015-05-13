@@ -1,0 +1,62 @@
+构建程序：cmake 2.8.12
+引用的第三方库：tinyobjload  qt5.4
+
+构建与运行方法：
+linux：
+直接再程序根目录运行如下指令：
+./build_and_run
+
+用法：
+build_and_run [obj filename]
+如果不指定obj，会使用根目录下的test.obj。
+
+window:
+这个我没试过，理论上用cmake构建一下是能用vs打开并且运行的。
+
+
+
+.
+├── build                    //构建目录
+│   ├── CMakeCache.txt
+│   ├── CMakeFiles
+│   ├── cmake_install.cmake
+│   ├── Makefile
+│   ├── src
+│   └── tinyobjloader
+├── build.sh                //构建脚本
+├── CMakeLists.txt          //cmake 构建文件
+├── include
+│   ├── cgtype.h
+│   ├── Edge.h
+│   ├── LinePair.h
+│   ├── MainWidget.h
+│   ├── objloader.h
+│   ├── Polygon.h
+│   └── ScanLineZBuffer.h
+├── README                  //说明文档
+├── src                     //源程序
+│   ├── CMakeLists.txt
+│   ├── Edge.cpp
+│   ├── LinePair.cpp
+│   ├── main.cpp
+│   ├── MainWidget.cpp
+│   ├── objloader.cpp
+│   ├── Polygon.cpp
+│   └── ScanLineZBuffer.cpp
+├── test.obj
+└── tinyobjloaderi          //解析obj的第三方库
+    ├── CMakeLists.txt
+    ├── cornell_box.mtl
+    ├── cornell_box_multimaterial.obj
+    ├── cornell_box.obj
+    ├── cube.mtl
+    ├── cube.obj
+    ├── examples
+    ├── images
+    ├── premake4.lua
+    ├── python
+    ├── README.md
+    ├── test.cc
+    ├── tiny_obj_loader.cc
+    ├── tiny_obj_loader.h
+    └── wercker.yml
